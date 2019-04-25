@@ -1,0 +1,71 @@
+/* layout: 6 rows, 6 columns. */
+.grid {
+	display:grid;
+	grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+	}
+
+/* Page header contains image of sky, page title, etc. */
+/* Would be cool to take an image of the self and split it roughly into the three shapes of the front page */
+/* Need to look up page transparency so image not overwhelming */
+/* better yet, use GIMP to make logo incorporating photos */
+.pageheader {
+	grid-area: 1 / 1 / 1 / 6;
+	background-color: #f9b295;
+	background-image: url(Banner.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #1c4b96;
+	text-align:center;
+	padding: 10px;
+	border: 1px solid black;
+	font-family: Garamond;
+	
+	}
+
+/* navpanel is the right-hand navigation panel on the main page that contains links to other pages on the site. */
+.navpanel {
+	grid-area: 2 / 1 / 6 / 1;
+	background: linear-gradient(to bottom left, #cdddf7, #29508e);
+	text-align: left;
+	padding: 10px;
+	font-family: Garamond;
+	}
+
+.navpanel h2{text-decoration: underline;}
+.navpanel a {
+	color: black;
+	text-shadow: 1px 1px 1px white;
+	}
+
+a:hover {
+	background-color: #d8b13c;
+	}
+
+/* content contains the textual content of a given page. */
+.content {
+	grid-area: 2 / 2 / 6 / 6;
+	background-color: white;
+	color: black;
+	background: linear-gradient(to bottom right, #cdddf7, #29508e);
+	text-align: left;
+	padding: 10px;
+	display:inline;
+	clear:left;
+	font-family: Helvetica;
+	}
+.content p{
+	padding-left: 30px;
+	margin-left: 15px;
+	}
+.content ul li{
+	margin-left: 40px;
+	margin: 10px;
+}
+.content h2{
+	text-decoration: underline;
+	margin-left: 40px;
+	}
+.content h3{
+	margin-left: 40px;
+	}
